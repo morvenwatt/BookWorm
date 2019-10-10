@@ -1,0 +1,29 @@
+.searchBar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    color: white;
+    border: 2px solid white;
+    width: 60%;
+    height: 200px;
+}
+
+.bookSearchForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.button {
+    font-size: 20px;
+    margin: 5px 0px;
+}
+
+.filters {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

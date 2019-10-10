@@ -1,22 +1,23 @@
 
+html {
+  background-image: url('./Images/books.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 /* HEADER STYLING */
 
 .header {
   text-align: center;
-  height: 20%;
-  background-image: url('./Images/books.jpg');
-  overflow: hidden;
-  opacity: 0.5;
+  color: white;
 }
 
 .header h1 {
-  font-size: 20px;
+  font-size: 50px;
   font-weight: bold;
-  color: hsla(240, 80, 50, 0.8);
   text-shadow: 2px 2px black;
 }
 
 .header h2 {
-  font-size: 15px;
-  color: hsla(200, 80, 50, 0.8);
+  font-size: 35px;
 }

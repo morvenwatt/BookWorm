@@ -13,7 +13,7 @@ class SearchButton extends Component {
             <Fragment>
                 <div className="button-container">
                     <h2 className={this.props.className}>
-                        <FontAwesomeIcon icon="book" className={this.props.className}/>
+                        
                         
                     </h2>
                 </div>
@@ -21,6 +21,6 @@ class SearchButton extends Component {
         )
     }
 }
-
+// <FontAwesomeIcon icon="book" className={this.props.className}/>
 //library.add(fab, faBook)
 export default SearchButton;

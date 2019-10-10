@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './Search.css';
 
+import BookwormHeader from '../BookwormHeader';
 import ResultsList from '../Book_Results/ResultsList';
 import SearchFilter from './SearchFilter';
 import SearchButton from './SearchButton';
@@ -49,7 +50,7 @@ class SearchBookForm extends Component {
 
         handleClick = () => {
             this.setState({
-                searchForBooks: this.searchForBooks
+                searchForBooks: "Search Complete"
             });
         }
 
@@ -84,7 +85,7 @@ class SearchBookForm extends Component {
     // This function goes over the data, and maps it into an object.
     // It uses the google API info to pull out which data we need.  
         getData(data){
-            const foundBooks = []
+            const foundBooks = [];
             Object.keys(data.items).map(i =>
                 foundBooks.push({
                     title: `Title: ${data.items[i].volumeInfo.title}`,
@@ -124,6 +125,8 @@ class SearchBookForm extends Component {
         render () {
             return (
                 <div className='main'>
+                    <BookwormHeader />
+                    <div className="searchBar">
                     <form className='bookSearchForm'>
 
                         <label htmlFor="searchForm">Search by keyword:</label>
@@ -140,14 +143,14 @@ class SearchBookForm extends Component {
                         className="button"
                         onClick={this.searchForBooks}>Search</button>
                     </form>
-
+                    
                     <SearchFilter
                         changeHandler={selected => this.setSelected(selected)}
                         updateFilters={() => this.updateFilters()} />
 
                     <SearchButton
                         className={this.state.SearchButton} />
-                    
+                    </div>
                     <div className="results">
                         {Object.keys(this.state.selectedBooks).map(i=>
                             <ResultsList

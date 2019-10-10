@@ -4,8 +4,8 @@ import './App.css';
 function BookwormHeader () {
     return (
         <header className="header">
-            <h1>BookWorm BookSearch</h1>
-            <h2>BookWorms Unite!</h2>
+            <h1>BookWorm</h1>
+            <h2>Find your next great read!</h2>
         </header>
     )
 }
